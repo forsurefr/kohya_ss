@@ -241,8 +241,7 @@ install_python_dependencies() {
   echo "If this operation ever runs too long, you can rerun this script in verbose mode to check."
   case "$OSTYPE" in
   "linux-gnu"*) pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 \
-    --extra-index-url https://download.pytorch.org/whl/cu118 >&3 &&
-    pip install -U -I xformers==0.0.20 >&3 ;;
+    --extra-index-url https://download.pytorch.org/whl/cu118 >&3 ;;
   "darwin"*) pip install torch==2.0.0 torchvision==0.15.1 \
     -f https://download.pytorch.org/whl/cpu/torch_stable.html >&3 ;;
   "cygwin")
